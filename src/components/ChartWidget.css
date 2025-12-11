@@ -1,0 +1,40 @@
+.chart-widget {
+    padding: var(--space-xl);
+    transition: transform var(--transition-base);
+}
+
+.chart-widget:hover {
+    transform: translateY(-4px);
+}
+
+.chart-header {
+    margin-bottom: var(--space-lg);
+}
+
+.chart-header h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text);
+}
+
+.chart-header p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.chart-container {
+    width: 100%;
+}
+
+.chart-loading,
+.chart-error {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-error p {
+    color: var(--color-danger);
+}

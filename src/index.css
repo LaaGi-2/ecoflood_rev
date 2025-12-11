@@ -1,0 +1,451 @@
+/* ==================== RESET & BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== ORGANIC MODERNISM THEME ==================== */
+/* Theme: Organic Modernism for Indonesia */
+/* Primary: #2A6354 (Forest Green) */
+/* Background: #FDF6E4 (Warm Cream) */
+/* Accent: #B5E251 (Lime Green) */
+
+:root {
+  /* Primary Colors - Forest Green Theme */
+  --color-primary: #2A6354;
+  --color-primary-dark: #1f4a3e;
+  --color-primary-light: #3a7d69;
+
+  /* Accent Colors - Lime Green */
+  --color-accent: #B5E251;
+  --color-accent-dark: #9ec841;
+  --color-accent-light: #c8ed71;
+
+  /* Secondary Colors - Natural Earth Tones */
+  --color-secondary: #D8A25E;
+  --color-secondary-dark: #c18e48;
+  --color-secondary-light: #e4b574;
+
+  /* Backgrounds - Warm Cream */
+  --color-bg: #FDF6E4;
+  --color-bg-secondary: #F5EDD6;
+  --color-bg-tertiary: #EDE4CC;
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #F8F0DC;
+
+  /* Text Colors - Natural Dark Tones */
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #757575;
+
+  /* Functional Colors */
+  --color-warning: #F4A259;
+  --color-danger: #E07856;
+  --color-success: #2A6354;
+  --color-info: #5B9AA9;
+
+  /* Organic Gradients */
+  --gradient-primary: linear-gradient(135deg, #2A6354 0%, #3a7d69 100%);
+  --gradient-accent: linear-gradient(135deg, #B5E251 0%, #c8ed71 100%);
+  --gradient-warm: linear-gradient(135deg, #FDF6E4 0%, #F5EDD6 100%);
+  --gradient-nature: linear-gradient(135deg, #2A6354 0%, #B5E251 100%);
+
+  /* Soft Shadows - Organic Feel */
+  --shadow-sm: 0 2px 4px rgba(42, 99, 84, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 99, 84, 0.12);
+  --shadow-lg: 0 8px 24px rgba(42, 99, 84, 0.15);
+  --shadow-xl: 0 16px 48px rgba(42, 99, 84, 0.18);
+  --shadow-glow: 0 0 24px rgba(181, 226, 81, 0.3);
+
+  /* Organic Borders */
+  --border-light: rgba(42, 99, 84, 0.1);
+  --border-medium: rgba(42, 99, 84, 0.2);
+  --border-strong: rgba(42, 99, 84, 0.3);
+
+  /* Spacing - Breathing Room */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Border Radius - Organic Curves */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+  --radius-full: 9999px;
+
+  /* Transitions - Natural Motion */
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography - Clean & Modern */
+  --font-sans: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Inter', sans-serif;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+/* Organic Highlight Text */
+.highlight {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.highlight-primary {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+/* ==================== ORGANIC CARDS ==================== */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+}
+
+/* ==================== ORGANIC BUTTONS ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary-dark);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ==================== ORGANIC FORMS ==================== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(42, 99, 84, 0.1);
+  background: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft var(--transition-base) ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight var(--transition-base) ease-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ==================== LOADING SPINNER ==================== */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border-light);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ==================== LEAFLET MAP OVERRIDES ==================== */
+.leaflet-container {
+  height: 100%;
+  border-radius: var(--radius-xl);
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background: white;
+  color: var(--color-text);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .card {
+    padding: var(--space-xl);
+  }
+}
+
+/* ==================== SCROLLBAR - Organic Style ==================== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}

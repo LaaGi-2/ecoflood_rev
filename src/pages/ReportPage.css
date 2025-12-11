@@ -1,0 +1,160 @@
+.report-page {
+    padding: var(--space-3xl) 0;
+    min-height: 100vh;
+}
+
+.submit-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.success-message {
+    padding: var(--space-md) var(--space-xl);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-primary);
+    font-weight: 600;
+}
+
+/* ==================== REPORT FORM ==================== */
+.report-form-container {
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.report-form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== REPORTS SECTION ==================== */
+.reports-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+}
+
+.no-reports {
+    text-align: center;
+    padding: var(--space-3xl);
+}
+
+.no-reports p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-xl);
+}
+
+.report-card {
+    padding: var(--space-xl);
+    transition: transform var(--transition-base);
+}
+
+.report-card:hover {
+    transform: translateY(-4px);
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.report-type-badge {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.report-type-badge.flood {
+    background: rgba(6, 182, 212, 0.2);
+    color: var(--color-secondary);
+}
+
+.report-type-badge.deforestation {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--color-danger);
+}
+
+.report-date {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.report-location {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+.report-description {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.report-image {
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.report-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.report-coords {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    display: inline-block;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

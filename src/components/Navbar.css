@@ -1,0 +1,103 @@
+.navbar {
+    background: var(--color-surface);
+    border-bottom: 2px solid var(--border-light);
+    padding: var(--space-lg) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: transform var(--transition-fast);
+    color: var(--color-primary);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.brand-icon {
+    font-size: 2rem;
+}
+
+.brand-text {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.navbar-links {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    transition: transform var(--transition-base);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    background: rgba(42, 99, 84, 0.05);
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    background: rgba(181, 226, 81, 0.15);
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+    background: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        gap: var(--space-sm);
+    }
+
+    .nav-link {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.875rem;
+    }
+
+    .brand-text {
+        display: none;
+    }
+}
