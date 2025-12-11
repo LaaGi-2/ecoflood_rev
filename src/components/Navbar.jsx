@@ -19,18 +19,19 @@ function Navbar() {
             Home
           </Link>
           <Link to="/map" className={`nav-link ${isActive('/map')}`}>
-            Map
+            Peta
           </Link>
           <Link to="/simulation" className={`nav-link ${isActive('/simulation')}`}>
-            Simulation
+            Simulasi
           </Link>
           <Link to="/reports" className={`nav-link ${isActive('/reports')}`}>
-            Reports
-          </Link>
-          <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}>
-            Dashboard
+            Laporan
           </Link>
         </div>
+        
+        <Link to="/dashboard" className="btn btn-primary btn-sm">
+           Dashboard
+        </Link>
       </div>
     </nav>
   )

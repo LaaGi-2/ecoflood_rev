@@ -1,17 +1,23 @@
 .navbar {
-    background: var(--color-surface);
-    border-bottom: 2px solid var(--border-light);
-    padding: var(--space-lg) 0;
+    background: var(--color-bg);
+    /* Match page background for seamless look */
+    padding: var(--space-md) 0;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-sm);
+    z-index: 1000;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--color-surface);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    max-width: 1200px;
+    /* Contain navbar slightly narrower than full width */
 }
 
 .navbar-brand {
@@ -19,52 +25,35 @@
     align-items: center;
     gap: var(--space-sm);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
-    transition: transform var(--transition-fast);
     color: var(--color-primary);
 }
 
-.navbar-brand:hover {
-    transform: scale(1.05);
-}
-
 .brand-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .brand-text {
     color: var(--color-primary);
     font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .navbar-links {
     display: flex;
-    gap: var(--space-lg);
+    gap: var(--space-xs);
     align-items: center;
 }
 
 .nav-link {
     color: var(--color-text-secondary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-full);
     transition: all var(--transition-fast);
-    position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 60%;
-    height: 3px;
-    background: var(--color-accent);
-    border-radius: var(--radius-full);
-    transition: transform var(--transition-base);
+    font-size: 0.9375rem;
 }
 
 .nav-link:hover {
@@ -72,32 +61,37 @@
     background: rgba(42, 99, 84, 0.05);
 }
 
-.nav-link:hover::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
 .nav-link.active {
     color: var(--color-primary);
-    background: rgba(181, 226, 81, 0.15);
-    font-weight: 700;
+    background: var(--color-bg);
+    /* Subtle active state */
+    font-weight: 600;
+    box-shadow: inset 0 0 0 1px var(--border-light);
 }
 
-.nav-link.active::after {
-    transform: translateX(-50%) scaleX(1);
-    background: var(--color-primary);
+.btn-sm {
+    padding: var(--space-xs) var(--space-lg);
+    font-size: 0.875rem;
 }
 
 @media (max-width: 768px) {
-    .navbar-links {
-        gap: var(--space-sm);
+    .navbar-container {
+        padding: var(--space-sm) var(--space-md);
+        margin: 0 var(--space-md);
+        border-radius: var(--radius-xl);
+    }
+
+    .brand-text {
+        font-size: 1rem;
     }
 
     .nav-link {
         padding: var(--space-xs) var(--space-sm);
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
     }
 
-    .brand-text {
+    .btn-sm {
         display: none;
+        /* Hide dashboard button on mobile for space */
     }
 }

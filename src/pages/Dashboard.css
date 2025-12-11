@@ -1,0 +1,6 @@
+.dashboard {
+    min-height: 100vh;
+    padding-top: 100px;
+    /* Space for fixed navbar */
+    background: var(--color-bg);
+}

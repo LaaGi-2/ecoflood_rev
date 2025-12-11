@@ -45,6 +45,12 @@
   --color-success: #2A6354;
   --color-info: #5B9AA9;
 
+  /* Environmental Data Layer Colors */
+  --color-flood: #3b82f6;
+  --color-fire: #f59e0b;
+  --color-biodiversity: #10b981;
+  --color-rainfall: #0ea5e9;
+
   /* Organic Gradients */
   --gradient-primary: linear-gradient(135deg, #2A6354 0%, #3a7d69 100%);
   --gradient-accent: linear-gradient(135deg, #B5E251 0%, #c8ed71 100%);
@@ -87,8 +93,10 @@
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Typography - Clean & Modern */
-  --font-sans: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Inter', sans-serif;
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Mulish', sans-serif;
+  --font-sans: 'Mulish', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'DM Sans', sans-serif;
 }
 
 /* ==================== TYPOGRAPHY ==================== */

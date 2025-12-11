@@ -3,18 +3,18 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import DashboardPage from './pages/DashboardPage'
 import MapPage from './pages/MapPage'
 import SimulationPage from './pages/SimulationPage'
 import ReportPage from './pages/ReportPage'
+import DashboardPage from './pages/DashboardPage'
 
-function App() {
+function AppMain() {
   return (
     <div className="app">
       <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<DashboardPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/map" element={<MapPage />} />
           <Route path="/simulation" element={<SimulationPage />} />
@@ -27,4 +27,4 @@ function App() {
   )
 }
 
-export default App
+export default AppMain

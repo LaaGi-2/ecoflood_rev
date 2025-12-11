@@ -1,0 +1,41 @@
+.island-selector {
+    margin-bottom: var(--space-lg);
+}
+
+.selector-label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+}
+
+.island-select {
+    width: 100%;
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border: 2px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.island-select:hover {
+    border-color: var(--color-primary);
+    background: white;
+}
+
+.island-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(42, 99, 84, 0.1);
+    background: white;
+}
+
+.island-select option {
+    padding: var(--space-sm);
+}
